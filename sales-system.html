@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales System | MRM Construction</title>
+  <meta name="description" content="Integrated garage and shop sales dashboard for MRM Construction with lead intake, quote calculator, ad generator, and CRM pipeline tracking.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-grid">
+      <a href="tel:+14172910478">Call 417-291-0478</a>
+      <a href="mailto:qrcmaxon@gmail.com">qrcmaxon@gmail.com</a>
+      <a href="index.html">Joplin, MO + Northwest Arkansas</a>
+    </div>
+  </div>
+  <header class="site-header compact">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="MRM Construction home">
+        <span class="brand-mark">MRM</span>
+        <span class="brand-lockup">
+          <span class="brand-text">Construction</span>
+          <span class="brand-subtext">Sales System</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="estimate.html">Get Quote</a>
+        <a href="sales-system.html" class="active">Sales System</a>
+        <a href="tel:+14172910478">Call</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">Integrated Program</p>
+        <h1>One Place to Run Ads, Quotes, Leads, and Follow-Up</h1>
+        <p>This dashboard ties together the pieces you have been building: the C&amp;H Carports 3D quote generator, ad copy, payment estimates, lead intake, CRM stages, and follow-up messaging for garage and shop sales in Joplin and Northwest Arkansas.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="sales-app-grid">
+          <article class="detail-card app-panel app-panel-wide">
+            <div class="app-panel-header">
+              <div>
+                <p class="eyebrow">Quote Generator</p>
+                <h2>C&amp;H 3D Builder Integration</h2>
+              </div>
+              <a class="button button-small" href="https://carportview.candhcarports.com/" target="_blank" rel="noreferrer">Open 3D Builder</a>
+            </div>
+            <div class="configurator-grid">
+              <div class="quote-panel">
+                <h3>How To Use It</h3>
+                <ul class="check-list single-column">
+                  <li>Open the 3D builder and configure the customer's building.</li>
+                  <li>Copy the configured size, colors, options, and quoted price into the lead form.</li>
+                  <li>Paste the builder link or reference URL so the quote stays tied to the lead.</li>
+                </ul>
+              </div>
+              <div class="quote-panel">
+                <h3>Best Workflow</h3>
+                <p>Use the builder as the source of truth for the actual building quote, then use this dashboard to save the lead, track stage changes, write follow-up texts, and generate local ad copy.</p>
+                <p class="configurator-link"><a href="https://carportview.candhcarports.com/" target="_blank" rel="noreferrer">carportview.candhcarports.com</a></p>
+              </div>
+            </div>
+          </article>
+
+          <article class="detail-card app-panel">
+            <div class="app-panel-header">
+              <div>
+                <p class="eyebrow">Lead Intake</p>
+                <h2>Add Lead</h2>
+              </div>
+              <span class="app-badge">Saved in browser</span>
+            </div>
+            <form class="lead-form light app-form" id="lead-form">
+              <label>
+                Customer Name
+                <input type="text" name="name" placeholder="Customer name" required>
+              </label>
+              <label>
+                Phone
+                <input type="tel" name="phone" placeholder="Phone number" required>
+              </label>
+              <label>
+                City
+                <select name="city" required>
+                  <option value="">Select city</option>
+                  <option>Joplin, MO</option>
+                  <option>Webb City, MO</option>
+                  <option>Carthage, MO</option>
+                  <option>Neosho, MO</option>
+                  <option>Fayetteville, AR</option>
+                  <option>Springdale, AR</option>
+                  <option>Rogers, AR</option>
+                  <option>Bentonville, AR</option>
+                </select>
+              </label>
+              <label>
+                Building Type
+                <select name="buildingType" required>
+                  <option>Garage</option>
+                  <option>Shop</option>
+                  <option>Carport</option>
+                  <option>Metal Building</option>
+                </select>
+              </label>
+              <label>
+                Size
+                <input type="text" name="size" placeholder="20x20, 24x30, 30x40" required>
+              </label>
+              <label>
+                Estimated Price
+                <input type="number" name="price" min="0" step="100" placeholder="12000" required>
+              </label>
+              <label>
+                Builder Link
+                <input type="url" name="builderUrl" placeholder="Paste 3D builder quote link">
+              </label>
+              <label>
+                Roof Style
+                <input type="text" name="roofStyle" placeholder="Regular, boxed eave, vertical">
+              </label>
+              <label>
+                Colors / Trim
+                <input type="text" name="colors" placeholder="Clay roof, pebble beige sides, black trim">
+              </label>
+              <label>
+                Use Case
+                <select name="useCase">
+                  <option>Home Garage</option>
+                  <option>Equipment Storage</option>
+                  <option>Workshop</option>
+                  <option>Business Use</option>
+                  <option>Farm Use</option>
+                </select>
+              </label>
+              <label>
+                Financing
+                <select name="financing">
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>Not Sure</option>
+                </select>
+              </label>
+              <label class="full-width">
+                Builder Summary
+                <textarea name="builderSummary" rows="3" placeholder="Roll-up doors, windows, lean-to, height, frame gauge, and any other quote details from the 3D builder."></textarea>
+              </label>
+              <label class="full-width">
+                Notes
+                <textarea name="notes" rows="4" placeholder="Add anything important about the property, add-ons, timing, or objections."></textarea>
+              </label>
+              <button class="button full-width" type="submit">Save Lead</button>
+            </form>
+          </article>
+
+          <article class="detail-card app-panel">
+            <div class="app-panel-header">
+              <div>
+                <p class="eyebrow">Quote Tool</p>
+                <h2>Payment Calculator</h2>
+              </div>
+              <span class="app-badge">Formula: price / 21.5</span>
+            </div>
+            <div class="quote-tool">
+              <label>
+                Price
+                <input id="calculator-price" type="number" min="0" step="100" value="12000">
+              </label>
+              <div class="quote-results">
+                <div class="quote-result-card">
+                  <span>Estimated Monthly Payment</span>
+                  <strong id="monthly-payment">$558</strong>
+                </div>
+                <div class="quote-result-card">
+                  <span>Sales Range</span>
+                  <strong id="payment-range">$502 - $614</strong>
+                </div>
+              </div>
+              <div class="quote-panel">
+                <h3>Suggested Quote Text</h3>
+                <p id="quote-script">Most of our buildings run somewhere in the $400 to $600 per month range depending on size and options. Want me to get you an exact quote?</p>
+              </div>
+              <div class="quote-panel">
+                <h3>Builder Note</h3>
+                <p>Use the C&amp;H 3D builder for the actual product quote. This calculator is just a fast financing estimate to keep the conversation moving.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="detail-card app-panel app-panel-wide">
+            <div class="app-panel-header">
+              <div>
+                <p class="eyebrow">Ad Builder</p>
+                <h2>Regional Ad Generator</h2>
+              </div>
+              <span class="app-badge">Marketplace ready</span>
+            </div>
+            <div class="ad-builder-grid">
+              <label>
+                Market
+                <select id="ad-market">
+                  <option value="joplin">Joplin / Missouri Side</option>
+                  <option value="arkansas">Northwest Arkansas</option>
+                  <option value="regional">Regional / Mixed Coverage</option>
+                </select>
+              </label>
+              <label>
+                Buyer Type
+                <select id="ad-buyer">
+                  <option value="garage">Home Garage Buyer</option>
+                  <option value="shop">Shop / Business Buyer</option>
+                  <option value="farm">Farm / Equipment Buyer</option>
+                  <option value="finance">Financing-Focused Buyer</option>
+                </select>
+              </label>
+              <label>
+                Monthly Hook
+                <input id="ad-hook" type="text" value="Payments starting around $400/month">
+              </label>
+              <button class="button" id="generate-ad" type="button">Generate Ad</button>
+            </div>
+            <div class="generated-copy">
+              <div class="quote-panel">
+                <h3>Ad Title</h3>
+                <p id="generated-title">Garages & Shops With Easy Monthly Payments</p>
+              </div>
+              <div class="quote-panel">
+                <h3>Ad Body</h3>
+                <p id="generated-body">Need a garage or shop on your property? We help buyers in Joplin and Northwest Arkansas get steel buildings installed with financing available. Great for trucks, tools, equipment, and work space. Message now for pricing and install timing.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="detail-card app-panel app-panel-wide">
+            <div class="app-panel-header">
+              <div>
+                <p class="eyebrow">CRM</p>
+                <h2>Lead Pipeline</h2>
+              </div>
+              <div class="button-row">
+                <button class="button button-secondary button-small" id="export-leads" type="button">Export JSON</button>
+                <button class="button button-secondary button-small" id="clear-leads" type="button">Clear All</button>
+              </div>
+            </div>
+            <div class="pipeline-board" id="pipeline-board"></div>
+          </article>
+
+          <article class="detail-card app-panel app-panel-wide">
+            <div class="app-panel-header">
+              <div>
+                <p class="eyebrow">Follow-Up</p>
+                <h2>Lead Message Builder</h2>
+              </div>
+              <span class="app-badge">Click a lead to populate</span>
+            </div>
+            <div class="follow-up-grid">
+              <label>
+                Lead
+                <select id="followup-lead"></select>
+              </label>
+              <label>
+                Message Type
+                <select id="followup-type">
+                  <option value="instant">Instant Reply</option>
+                  <option value="qualification">Qualification</option>
+                  <option value="quote">Quote Push</option>
+                  <option value="day1">Day 1 Follow-Up</option>
+                  <option value="day3">Day 3 Follow-Up</option>
+                  <option value="day7">Day 7 Follow-Up</option>
+                </select>
+              </label>
+            </div>
+            <div class="quote-panel">
+              <h3>Generated Message</h3>
+              <textarea id="followup-output" rows="7" class="output-box" readonly></textarea>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p>This local dashboard stores data in your browser so you can use it as a lightweight sales console without extra setup.</p>
+      </div>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="estimate.html">Get Quote</a>
+      </div>
+      <div>
+        <p>Call 417-291-0478 to close live leads fast.</p>
+      </div>
+    </div>
+  </footer>
+  <div class="mobile-cta">
+    <a href="index.html">Home</a>
+    <a href="estimate.html">Quote</a>
+    <a href="tel:+14172910478">Call</a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
